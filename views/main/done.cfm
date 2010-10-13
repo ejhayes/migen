@@ -12,17 +12,12 @@
     </p>
     
     <h4><cfoutput>Submitted Code (partial) (<a href="#buildURL('main.files&id=' & rc.id)#">edit</a>)</cfoutput></h4>
-    <cfloop array="#rc.changeFiles#" index="i"> 
-        <strong><cfoutput>#i.name#</cfoutput></strong><br />
-        <script type="syntaxhighlighter" class="brush: sql"><![CDATA[
-        <cfscript>
-            savecontent variable="theFile" {
-                GetPageContext().Include("../../assets/migrations/queued/" & i.name); 
-            }
-            WriteOutput(StripCR(Mid(theFile,1,800)));
-        </cfscript>
-        ]]></script>
+    <cfloop array="#rc.changeFiles#" index="i">
+        <!--- Read the submitted file --->
+        <cffile action = "read" file = "#rc.directory#/#i.name#" variable = "codeFile">
         
+        <strong><cfoutput>#LCase(i.name)# (<a href="#buildURL('main.code&id=' & rc.id)#&filename=#i.name#" target="_blank">view full file</a>)</cfoutput></strong><br />
+        <script type="syntaxhighlighter" class="brush: sql"><![CDATA[<cfoutput>#Mid(codeFile,1,800)##chr(13)##chr(10)#-- NOTE: THIS IS A PARTIAL VIEW OF #UCase(i.name)#</cfoutput>]]></script>
     </cfloop>
     
     <p class="line"></p>

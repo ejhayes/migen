@@ -93,4 +93,11 @@ component {
         rc.title="Order Summary";
         rc.designId="I-7.0";
     }
+    
+    function code(any rc){
+        loadChange(rc);
+        
+        rc.title="Code";
+        rc.designId="I-7.0";
+    }
 }
