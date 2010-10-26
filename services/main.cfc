@@ -39,7 +39,7 @@ component {
     function lookups(){
         // returns lookups needed by apps
         ret = {};
-        ret['applications'] = EntityToQuery(EntityLoad("Applications"));
+        ret['applications'] = EntityToQuery(ormExecuteQuery("from Applications order by Name"));
         
         return ret;
     }
