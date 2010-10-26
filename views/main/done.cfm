@@ -7,7 +7,7 @@
     <strong>Request Created by #rc.app.record.getCreatedBy()# on #dateFormat(rc.app.record.getCreated(),"m/d/yyyy (dddd)")# at #timeFormat(rc.app.record.getCreated(),"h:mm tt")#</strong><br />
     <strong>Target Application:</strong> #rc.app.record.getApplication().getName()# (data steward is #rc.app.record.getApplication().getSteward()#)<br />
     <strong>Related Track-It Tickets:</strong> #rc.app.record.getTicketNumber()#<br />
-    <strong>Description:</strong>#rc.app.record.getDescription()#
+    <strong>Description:</strong><br />#ParagraphFormat(rc.app.record.getDescription())#
     </cfoutput>
     </p>
     

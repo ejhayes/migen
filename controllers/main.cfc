@@ -100,4 +100,11 @@ component {
         rc.title="Code";
         rc.designId="I-7.0";
     }
+    
+    function orders(any rc){
+        rc.migrations = EntityLoad("Migrations");
+        
+        rc.title="Orders";
+        rc.designId="I-7.0";
+    }
 }
