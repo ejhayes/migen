@@ -4,7 +4,7 @@
     <cfif arrayLen(rc.migrations) EQ 0>
         <h2>Yo fool there is nothing to do!</h2>
     <cfelse>
-        <table width="100%" class="tablesorter" data-sort="[[1,0]]" >
+        <table width="100%" class="tablesorter" data-sort="[[1,1],[0,1]]" >
             <thead>
                 <tr>
                     <th>Order</th>
