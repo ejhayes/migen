@@ -42,15 +42,15 @@ component {
         if( StructKeyExists(rc,"id") ){
 			// load the app related files
 			rc.directory = ExpandPath('./assets/migrations/queued');
-			variables.fw.service("main.directoryListing","int_development",{pattern="internal_development_*.sql"});
-			variables.fw.service("main.directoryListing","int_testing",{pattern="internal_testing_*.sql"});
-			variables.fw.service("main.directoryListing","int_staging",{pattern="internal_staging_*.sql"});
-			variables.fw.service("main.directoryListing","int_production",{pattern="internal_production_*.sql"});
-			variables.fw.service("main.directoryListing","ext_development",{pattern="external_development_*.sql"});
-			variables.fw.service("main.directoryListing","ext_testing",{pattern="external_testing_*.sql"});
-			variables.fw.service("main.directoryListing","ext_staging",{pattern="external_staging_*.sql"});
-			variables.fw.service("main.directoryListing","ext_production",{pattern="external_production_*.sql"});
-			variables.fw.service("main.directoryListing","changeFiles",{pattern="*.sql"});
+			variables.fw.service("main.directoryListing","int_development",{pattern="internal_development_*"});
+			variables.fw.service("main.directoryListing","int_testing",{pattern="internal_testing_*"});
+			variables.fw.service("main.directoryListing","int_staging",{pattern="internal_staging_*"});
+			variables.fw.service("main.directoryListing","int_production",{pattern="internal_production_*"});
+			variables.fw.service("main.directoryListing","ext_development",{pattern="external_development_*"});
+			variables.fw.service("main.directoryListing","ext_testing",{pattern="external_testing_*"});
+			variables.fw.service("main.directoryListing","ext_staging",{pattern="external_staging_*"});
+			variables.fw.service("main.directoryListing","ext_production",{pattern="external_production_*"});
+			variables.fw.service("main.directoryListing","changeFiles",{pattern="*"});
 		}
     }
 
