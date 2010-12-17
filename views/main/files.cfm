@@ -8,7 +8,7 @@
                 element: $(this)[0],
                 action: '<cfoutput>#buildURL("main.upload")#</cfoutput>',
                 removeAction: '<cfoutput>#buildURL("main.remove")#</cfoutput>',
-                allowedExtensions: ['sql','sh','doc','txt'],
+                allowedExtensions: ['sql','sh','doc','txt','dtsx'],
                 minSizeLimit: 0, // no empty files!
                 params: {
                     prefix: '<cfoutput>#rc.id#</cfoutput>' + '_' + $(this).parent().attr('data-environment') + '_' + $(this).attr('data-stage')
